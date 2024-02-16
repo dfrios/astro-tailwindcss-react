@@ -18,7 +18,7 @@ yarn install
 ```
 
 3. You should get a folder structure like this:
-``
+```
 ── astro.config.mjs
 ├── node_modules
 │   ├── ...
