@@ -1,16 +1,35 @@
 ---
+import Constants from "../data/constants.json";
 
+import "../styles/styles.css";
+
+import MetaPixelHead from "../components/MetaPixelHead.astro";
+import MetaPixelBody from "../components/MetaPixelBody.astro";
+import GoogleTagManagerHead from "../components/GoogleTagManagerHead.astro";
+import GoogleTagManagerBody from "../components/GoogleTagManagerBody.astro";
+import OpenGraph from "../components/OpenGraph.astro";
 ---
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+
+		<title>{Constants.title}</title>
+
+		<GoogleTagManagerHead />
+		<MetaPixelHead />
+		<OpenGraph />
+
 	</head>
 	<body>
-		<h1>Astro</h1>
+
+		<GoogleTagManagerBody />
+		<MetaPixelBody />
+		
 	</body>
 </html>
