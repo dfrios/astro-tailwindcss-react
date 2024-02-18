@@ -16,3 +16,8 @@
       lg:mx-auto
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
