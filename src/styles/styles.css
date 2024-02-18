@@ -5,7 +5,14 @@
 
 @layer components {
 
-  .nothing {
-    @apply m-0;
+  .box-container {
+    @apply
+      max-w-[85%]
+      mx-auto
+      md:max-w-[85%]
+      md:mx-auto
+      lg:w-[80%]
+      lg:max-w-[1100px]
+      lg:mx-auto
   }
 }
