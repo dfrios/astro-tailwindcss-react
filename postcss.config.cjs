@@ -1,19 +1,13 @@
-// const path = require('path');
+module.exports = (cfg) => {
 
-// module.exports = {
-//   plugins: {
-//     tailwindcss: {
-//       config: path.join(__dirname, 'tailwind.config.js'),
-//     },
-//     autoprefixer: {},
-//   },
-// };
+  const devMode = (cfg.env === "development");
 
-
-module.exports = {
-  plugins: [
-    require('tailwindcss'),
-    require('autoprefixer'),
-    require('cssnano'),
-  ],
+  return {
+    map : devMode ? "inline" : null,
+    plugins: [
+      require('tailwindcss')(),
+      require('autoprefixer')(),
+      devMode ? null : require('cssnano')() ,
+    ],
+  }
 };
