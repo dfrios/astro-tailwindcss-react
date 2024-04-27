@@ -6,5 +6,8 @@ import relativeLinks from "astro-relative-links";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind(), relativeLinks()]
+  integrations: [react(), tailwind(), relativeLinks()],
+  build: {
+    assets: '_assets'
+  }
 });
