@@ -8,8 +8,10 @@ export default {
 			colors: {
 			},
 			fontFamily: {
+				DummyFont: ['DummyFont', ...defaultTheme.fontFamily.sans],
 			},
 			fontSize: {
+				base: ['1rem', '1rem'],
 			},
 			keyframes: {
 				"kenburns-left": {

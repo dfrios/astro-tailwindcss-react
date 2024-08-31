@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'DummyFont';
+  src: url('fonts/dummy-font.ttf') format('ttf');
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
