@@ -1,5 +1,5 @@
 ---
-import Constants from "@/data/constants.json";
+import constants from "@/data/constants.json";
 
 import "@/styles/styles.css";
 
@@ -18,11 +18,11 @@ import Footer from "@/components/sections/Footer.astro";
 	<head>
 		<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href=`${Constants.url}/favicon.png` />
+    <link rel="icon" type="image/png" href=`${constants.url}/favicon.png` />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<title>{Constants.title}</title>
+		<title>{constants.title}</title>
 
 		<GoogleTagManagerHead />
 		<MetaPixelHead />
