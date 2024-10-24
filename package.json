@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.4",
-    "@astrojs/react": "^3.0.10",
-    "@astrojs/sitemap": "^3.2.0",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/check": "0.9.4",
+    "@astrojs/react": "3.6.2",
+    "@astrojs/sitemap": "3.2.1",
+    "@astrojs/tailwind": "5.1.2",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
-    "astro": "^4.15.1",
+    "astro": "4.16.7",
     "astro-devtool-breakpoints": "^0.3.0",
     "astro-relative-links": "^0.3.7",
     "autoprefixer": "^10.4.17",
