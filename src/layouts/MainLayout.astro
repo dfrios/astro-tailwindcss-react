@@ -1,0 +1,37 @@
+---
+import constants from "@/data/constants.json";
+
+import "@/styles/styles.css";
+
+import MetaPixelHead from "@/components/base/MetaPixelHead.astro";
+import MetaPixelBody from "@/components/base/MetaPixelBody.astro";
+import GoogleTagManagerHead from "@/components/base/GoogleTagManagerHead.astro";
+import GoogleTagManagerBody from "@/components/base/GoogleTagManagerBody.astro";
+import OpenGraph from "@/components/base/OpenGraph.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href=`${constants.url}/favicon.png` />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<title>{constants.title}</title>
+
+		<GoogleTagManagerHead />
+		<MetaPixelHead />
+		<OpenGraph />
+
+	</head>
+	<body class="content-visibility-auto">
+
+		<GoogleTagManagerBody />
+		<MetaPixelBody />
+
+    <slot />
+
+	</body>
+</html>
