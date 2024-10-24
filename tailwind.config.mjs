@@ -1,5 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
-import daisyui from 'daisyui';
+// import daisyui from 'daisyui';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -65,7 +65,10 @@ export default {
 		},
 	},
 
-	plugins: [require("daisyui")],
+	plugins: [
+		require("daisyui"),
+		require("tailwindcss-content-visibility")
+	],
 
 	daisyui: {
     themes: [
