@@ -1,11 +1,17 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import daisyui from 'daisyui';
 import tailwindcssContentVisibility from 'tailwindcss-content-visibility';
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	content: {
+		files: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+		extract
+	},
 	theme: {
+		screens,
+		fontSize,
 		extend: {
 			colors: {
 			},
@@ -68,7 +74,8 @@ export default {
 
 	plugins: [
 		daisyui,
-		tailwindcssContentVisibility
+		tailwindcssContentVisibility,
+		fluid
 	],
 
 	daisyui: {
@@ -79,5 +86,5 @@ export default {
         },
       },
     ],
-  }
+  },
 }
