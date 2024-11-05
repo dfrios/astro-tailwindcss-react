@@ -6439,15 +6439,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss-content-visibility@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "tailwindcss-content-visibility@npm:1.0.0"
-  peerDependencies:
-    tailwindcss: ^3.0.0
-  checksum: 10c0/3d505265c5657ebe4cf46e745309e4491d7136183ba02612ae1b3e1a153d628e6f67c337dffe2e78c62c5c7adda8841f06f4e697f23b112f12535cf1aa2e48e5
-  languageName: node
-  linkType: hard
-
 "tailwindcss@npm:^3.4.14":
   version: 3.4.14
   resolution: "tailwindcss@npm:3.4.14"
@@ -6843,7 +6834,6 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     tailwindcss: "npm:^3.4.14"
-    tailwindcss-content-visibility: "npm:^1.0.0"
     typescript: "npm:^5.6.3"
   languageName: unknown
   linkType: soft

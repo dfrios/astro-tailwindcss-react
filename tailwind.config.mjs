@@ -1,6 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import daisyui from 'daisyui';
-import tailwindcssContentVisibility from 'tailwindcss-content-visibility';
 import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
 
 /** @type {import('tailwindcss').Config} */
@@ -74,7 +73,6 @@ export default {
 
 	plugins: [
 		daisyui,
-		tailwindcssContentVisibility,
 		fluid
 	],
 
