@@ -1,0 +1,18 @@
+RewriteEngine on
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+<ifModule mod_headers.c>
+  Header always set Content-Security-Policy "upgrade-insecure-requests;"
+  Header set Strict-Transport-Security "max-age=10886400; includeSubDomains; preload"
+  Header always set X-Frame-Options "deny"
+  Header setifempty Referrer-Policy: same-origin
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Permitted-Cross-Domain-Policies "none"
+  Header set Referrer-Policy "no-referrer"
+  Header set X-Content-Type-Options: nosniff
+  Header set Feature-Policy "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'self'; camera 'none'; cookie 'self'; docwrite 'self'; domain 'self'; encrypted-media 'self'; fullscreen 'self'; geolocation 'self'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; speaker 'self'; sync-script 'self'; sync-xhr 'self'; unsized-media 'self'; usb 'none'; vertical-scroll 'self'; vibrate 'none'; vr 'none'"
+  Header set Permissions-Policy "accelerometer=(), ambient-light-sensor=(), autoplay=(self 'https://DOMAIN-NAME'), camera=(), cookie=(self 'https://DOMAIN-NAME'), docwrite=(self 'https://DOMAIN-NAME'), domain=(self 'https://DOMAIN-NAME'), encrypted-media=(self 'https://DOMAIN-NAME'), fullscreen=(self 'https://DOMAIN-NAME'),  geolocation=(self 'https://DOMAIN-NAME'), gyroscope=(); magnetometer=(); microphone=(); midi=(); payment=(); picture-in-picture=(); speaker=(self 'https://DOMAIN-NAME'); sync-script=(self 'https://DOMAIN-NAME'); sync-xhr=(self 'https://DOMAIN-NAME'); unsized-media 'self'; usb=(); vertical-scroll 'self'; vibrate=(); vr=()"
+</ifModule>
+
+ErrorDocument 404 /404.html
