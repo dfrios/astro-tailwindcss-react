@@ -72,7 +72,11 @@ export default {
 
 	plugins: [
 		daisyui,
-		fluid
+		fluid(
+			{
+				checkSC144: false
+			}
+		)
 	],
 
 	daisyui: {
