@@ -1192,6 +1192,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@minify-html/node-darwin-x64@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@minify-html/node-darwin-x64@npm:0.15.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@minify-html/node-linux-x64@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@minify-html/node-linux-x64@npm:0.15.0"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@minify-html/node-win32-x64@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@minify-html/node-win32-x64@npm:0.15.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1252,6 +1273,26 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 10c0/5bd7576bb1b38a47a7fc7b51ac9f38748e772beebc56200450c4a817d712232b8f1d3ef70532c80840243c657d491cf6a6be1e3a214cff907645819fdc34aadd
+  languageName: node
+  linkType: hard
+
+"@redwerkz/html-min@npm:^0.15.1":
+  version: 0.15.1
+  resolution: "@redwerkz/html-min@npm:0.15.1"
+  dependencies:
+    "@minify-html/node-darwin-x64": "npm:0.15.0"
+    "@minify-html/node-linux-x64": "npm:0.15.0"
+    "@minify-html/node-win32-x64": "npm:0.15.0"
+  dependenciesMeta:
+    "@minify-html/node-darwin-x64":
+      optional: true
+    "@minify-html/node-linux-x64":
+      optional: true
+    "@minify-html/node-win32-x64":
+      optional: true
+  bin:
+    minify-html: cli.js
+  checksum: 10c0/bb877d6469f654c13d13d7f7d98d8717e58dcecea4c814cf2ce410f8bfbb10110671510162f99a84beb6ef5a0240586cb8ccb095afc7ecacf7934c9b85cb5c82
   languageName: node
   linkType: hard
 
@@ -1929,6 +1970,18 @@ __metadata:
   peerDependencies:
     astro: ^4.0.0
   checksum: 10c0/a7f1bec3acd52a99bd988fd034ff1528c882cf6f5b7cd1c87be4d319b6c8e9aa2fb49d40f656beda8274c0c52822f8a73148c1d23289174b32971fff213870a0
+  languageName: node
+  linkType: hard
+
+"astro-min@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "astro-min@npm:1.3.1"
+  dependencies:
+    "@redwerkz/html-min": "npm:^0.15.1"
+    svgo: "npm:^3.2.0"
+  peerDependencies:
+    astro: "*"
+  checksum: 10c0/a9e38427817ee9a57669e29ddb58a62f09831bca013a9a67f149bd57e457f25f8c32587b52b9b15ebc47a9b571b40d0144ad03b9b27b6b560ced578d238afa68
   languageName: node
   linkType: hard
 
@@ -6422,7 +6475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^3.3.2":
+"svgo@npm:^3.2.0, svgo@npm:^3.3.2":
   version: 3.3.2
   resolution: "svgo@npm:3.3.2"
   dependencies:
@@ -6822,6 +6875,7 @@ __metadata:
     "@types/react-dom": "npm:^18.3.1"
     astro: "npm:4.16.9"
     astro-devtool-breakpoints: "npm:^0.3.0"
+    astro-min: "npm:^1.3.1"
     astro-relative-links: "npm:^0.4.0"
     autoprefixer: "npm:^10.4.20"
     cssnano: "npm:^7.0.6"
