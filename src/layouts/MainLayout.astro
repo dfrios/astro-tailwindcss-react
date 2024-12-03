@@ -1,6 +1,4 @@
 ---
-import constants from "@/data/constants.json";
-
 import "@/styles/styles.css";
 
 import MetaPixelHead from "@/components/base/MetaPixelHead.astro";
@@ -8,10 +6,12 @@ import MetaPixelBody from "@/components/base/MetaPixelBody.astro";
 import GoogleTagManagerHead from "@/components/base/GoogleTagManagerHead.astro";
 import GoogleTagManagerBody from "@/components/base/GoogleTagManagerBody.astro";
 import OpenGraph from "@/components/base/OpenGraph.astro";
+
+const constants = await import(`../data/constants-${Astro.currentLocale}.json`, {assert: { type: "json"}});
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth" dir="ltr">
+<html lang={Astro.currentLocale} class="scroll-smooth" dir="ltr">
 	<head>
 		<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

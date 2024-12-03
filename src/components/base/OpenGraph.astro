@@ -1,11 +1,11 @@
 ---
-import Constants from "../../data/constants.json"
+const constants = await import(`../../data/constants-${Astro.currentLocale}.json`, {assert: { type: "json"}});
 ---
 
-<meta property="og:title" content={Constants.title} />
-<meta property="og:description" content={Constants.description} />
+<meta property="og:title" content={constants.title} />
+<meta property="og:description" content={constants.description} />
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Constants.url} />
-<meta property="og:image" content=`${Constants.url}/opengraph.jpg` />
+<meta property="og:url" content={constants.url} />
+<meta property="og:image" content=`${constants.url}/opengraph.jpg` />
 <meta property="og:image:type" content="image/jpg" />
 <meta property="og:locale" content="es" />
